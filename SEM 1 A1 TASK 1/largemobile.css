@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+/* this imports the google fonts that's required to use */
+@media screen and (min-width:540px) {
+/* all the styles written only applies when the screen size is 540px or wider */
+body {
+  background-color: #e9e9e9;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+main {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+/* a limit width so it stays centered, centers main container, overflow hidden hides anything that sticks out */
+
+header {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border: 1px solid #aaa;
+  font-size: 12px;
+  color: gray;
+}
+/* this part shows the logo where it turns it into a circle through border radius */
+
+nav {
+    margin-bottom: 10px;
+}
+/* space under nav */
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  margin: 0 8px;
+  font-size: 14px;
+}
+/* removes and edits the hyperlinks such as the Our Blog, Our Artists, and Our Story*/
+
+nav a:hover {
+    color: #2563eb;
+}
+/* change link color when it's hovered */
+
+h1, h2, h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+    color: #14181d;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding-top: -10px;
+    margin-bottom: -30px;
+}
+/* to make the space tighter below */
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+.album-cover {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* the box around the cover. so it lets it have a background color, border radius to have the rounded corners effect. hides the overflow parts of the image. makes its center as well */
+.album-cover img{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+/* makes the image inside show its proper size as well as editing the way it looks like such as having rounded corners as well */
+.author {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.author img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+/* enables to make the author picture a circle */
+
+footer {
+    background-color: #14181d;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    border-top: 1px solid #222;
+}
+
+}

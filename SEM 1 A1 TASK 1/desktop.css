@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+ 
+
+body {
+    background-color: #e9e9e9;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 16px;
+    min-height: 100vh;    
+    margin: 0;
+    line-height:1.6;
+    color:#4b5563;
+}
+
+/* this part is mostly about the enitre visible page content. it showcases the background color, font given, its size, as for the min-height that ensures that the body coveres at leat the full viewport height. margin here basically removes the default webpage margin so theres no white space around. */
+
+.main-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* this part is mainly focused with the main container that holds all the content */
+
+.page-header {
+    background-color: #e9e9e9;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* this part focuses on the header area at the top of the page. it shows here where theres a flexbox layout so I can align items. stack header items vertically like the logo first then nav. */
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* basically focuses on the container around the logo. border radius is to make the image from square to circle. overflow hidden to clip the imaage of it tries to go outside the circle */
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* focuses on the image inside the logo container. for the object fit cover here, it makes the image fill the area without any effects, so it crops out its excess */
+
+.author-photo-container {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* this focuses on the container around the authors profile picture. the flex shrink prevents the elements from becoming tiny if the screen is too narrow. */
+
+.author-photo-container img {
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+/* focuses on the image inside the authors pic container. so the max width and height ensures that it cant be too wide or too tall than the container and that the width and height auto ensures that it uses the images actual size */
+
+.navigation a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s
+}
+
+/* focuses on all link tags inside the nav class. text decoration none removes the hyperlink or the underline and color thing from the word. for the transition, theres 0.2 seconds as a hover effect. */
+
+.navigation a:hover {
+    color: black;
+}
+
+
+.article-main {
+    padding:0 40px 24px 40px;
+    display: flex;
+    flex-direction: column;
+}
+/* focuses on the main content. */
+
+h1, h2, h3 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    color: black;
+}
+
+/* focuses on all the main headline elements. uses a specific font given by Sir, to use. */
+
+h2 {
+    font-size: 3rem;
+}
+/* just focuses on the h2 specifically */
+
+.main-title {
+    font-size: 4rem;
+    margin-bottom: 0;
+    line-height: 0.9;
+}
+/* focuses on the main title thats h1 */
+
+.sub-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color:#4b5563;
+    margin-top: 5px;
+    margin-bottom: 24px;
+}
+/* focuses on the subtitle below the h1 */
+
+.lead-paragraph {
+    margin-bottom: 0;
+}
+/* focuses on the opening paragraph wrapper */
+
+.lead-paragraph p {
+    font-weight:300;
+}
+/* this allows the paragraph inside the lead paragraph wrapper */
+
+p {
+    margin-bottom: 1.2em;
+}
+/* focuses on all paragraphs */
+
+.article-main section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* focuses on all section elements in the article */
+
+.title-section {
+    margin-bottom: 40px;
+}
+
+.article-body-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 0;
+}
+/* this part focuses on the container for the main article columns. in the 1fr part its a default to one column on small screens */
+
+.article-main section:nth-child(2) {
+    margin-bottom:24px;
+}
+/* this selects the second section to ensure proper bottom spacing on small screens */
+
+@media (min-width:640px) {
+    .article-body-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* this is where styles apply only when the screen is 640px wide */
+
+@media (min-width: 1024px) {
+    .article-main {
+        padding: 0 50px 40px 50px;
+    }
+    /* this is where styles apply only when the screen is 1024px wide */
+
+    .article-main section:not(.title-section) {
+        margin-top: 24px;
+    }
+    /* applies top margin to all sections except the title section */
+
+    .article-main section:nth-child(2) {
+        margin-bottom: 0;
+    }
+    /* this resets margin for the second section on desktop */
+
+    .article-body-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* switches to a 3 column layout */
+
+
+    .author-photo-container {
+        width: 200px;
+        height: 200px;
+        margin-left: 50px;
+    }
+}
+
+.album-grid-section {
+    margin-bottom: 0;
+}
+/* this targets the section containing the album grid */
+
+.album-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 24px;
+    grid-template-columns: 1fr;
+    min-height: 500px;
+}
+/* focuses on the container for the featured album and album covers*/
+
+@media (min-width: 1024px) {
+    .album-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        width: 100%;
+        position: relative;
+        border: none;
+        margin-top: 0;
+    }
+    /* this part creates a layout. 1 column is twice as wide the 2fr as the other 1fr */
+
+    .featured-album-wrapper {
+        grid-column: 1/2;
+        position: relative;
+        overflow: hidden;
+        border-right: none;
+    }
+    /* this part makes the wrapper to take up the 1st column (the 2fr column) */
+
+    .small-albums-grid-wrapper {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+        overflow: hidden;
+    }
+    /* this part makes the wrapper to take up the 2nd column (the 1fr column) */
+}
+
+.album-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1d5db;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    border: none;
+}
+/* focuses on the individual album cover containers */
+
+.album-container img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+/* focuses on the album image inside the container. position absolute makes precise placement inside the relative parent. as for the z index it makes the image behind the diagonal lines. */
+
+.album-diagonal::before,
+.album-diagonal::after {
+    content: '';
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-color: #4b5563;
+    border-style: solid;
+    pointer-events: none;
+    z-index: 1;
+}
+/* makes the 2 elements used to draw the diagonal lines. */
+
+.album-diagonal::before {
+    border-bottom: 1px solid #4b5563;
+    border-left: 1px solid #4b5563;
+    transform-origin: top left;
+    transform: rotate(45deg) scale(1.414);
+}
+/* the transofrm origin sets the point for the rotation to the top left corner. the rotate part rotates and scales up to cover the whole square diagonally */
+
+.album-diagonal::after {
+    border-bottom: 1px solid #4b5563;
+    border-right: 1px solid #4b5563;
+    transform-origin: top right;
+    transform: rotate(-45deg) scale(1.414);
+}
+
+@media (min-width: 1024px) {
+    .featured-album {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    /* specific styles for featured/small albums */
+
+    .small-albums-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+    /* the 1fr and 1fr are 2 equal columns and rows*/
+
+    .small-albums-grid .album-container {
+        border: none;
+        aspect-ratio: unset;
+    }
+
+    .small-albums-grid .album-container:nth-child(2n) {
+        border-right: none;
+    }
+    /* selects every second album container */
+    
+    .small-albums-grid .album-container:nth-child(3),
+    .small-albums-grid .album-container:nth-child(4) {
+        border-bottom: none;
+    }
+
+}
+
+.author-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 60px;
+}
+/* the flex direction column is to stack text on top of the photo*/
+
+.author-text {
+    flex-grow:1;
+    width: 100%;
+}
+/* focuses on the text portion of the author bio */
+
+@media (min-width: 1024px) {
+    .author-section {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.page-footer {
+    background-color: #14181d;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+    margin-top: 40px;
+}

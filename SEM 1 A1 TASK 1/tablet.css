@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+/* this imports the font that is required for the page */
+@media screen and (min-width:720px) {
+    /* all the css written only applies when the screen is 720px or wider */
+
+body {
+  background-color: #e9e9e9;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  margin: 0;
+  padding: 30px;
+}
+
+main {
+  background-color: #fff;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+/* makes the page have rounded corners, center the page horizontally,and page having max 960px wide */
+
+.top-header {
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #f3f3f3;
+}
+
+
+.top-header .logo {
+  width: 80px;
+  height: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+/* the margin parts shows the center of the logo which is 0 and 20px which is the spacing below */
+
+nav {
+    margin-bottom: 20px;
+}
+/* space below the navbar */
+
+.top-header nav a {
+  text-decoration: none;
+  color: #555;
+  margin: 0 12px;
+  font-size: 16px;
+}
+/* this part designs the words where it has hyperlink or lines with blue color on them */
+
+.top-header a:hover {
+    color: #2563eb;
+}
+
+
+
+h1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    color: #14181d;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px 0 30px;
+}
+
+h2, h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+    color: #14181d;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 40px 0 20px;
+}
+
+
+p{
+    font-size: 18px;
+    margin-bottom: 20px; 
+    padding: 0 30px;
+}
+
+
+.album-section {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 0 30px 30px;
+}
+/* this part uses a grid layout, have 2 equal columns, spaces between pictures, and a padding around the grid */
+
+.album-cover {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-cover img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.author {
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding: 30px;
+    gap: 30px;
+    
+}
+/* to align items vertically, for the display part-it places text and image in a row  */
+
+.author-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author-text h3,
+.author-text p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+/* puts the text on the left side */
+
+.author-text p{
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.author-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.author-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #14181d;
+    color: #bbb;
+    text-align: center;
+    padding: 30px;
+    
+}
+
+}
