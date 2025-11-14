@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+/* imports the google fonts that is required to be used */
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #070410;
+    color: #FFFFFF;
+    margin: 0;
+    padding:0;
+}
+
+.font-teko {
+    font-family: 'Teko', sans-serif;
+}
+
+.main-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(35, 22, 81, 0.5);
+}
+/* this part centers the main content on the screen that sets a maximum width of 900px and adds a large indigo color shadow */
+
+.header {
+    background-color: #231651;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* styles the nav bar. makes it stick to the top even when youre scrolling */
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 48px;
+    align-items: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    
+}
+
+
+
+.logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+/* the watch.it part */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+/* to arrange the genre links horizontally and center them */
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #a5b4fc;
+}
+
+.search-button {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    background-color: #FFFFFF;
+    color: #231651;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.search-button:hover {
+    background-color: #e5e7eb;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 48px;
+
+}
+/* the main page content area where it expands to fill the available space and adds padding padding around the content */
+
+
+
+.movie-container {
+    background-color: #231651;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border: 2px solid #4f46e5;
+}
+/* base style for all movie containers. it sets the main background color i chose and the padding, large rounded corners, and having a border */
+
+.movie-poster {
+    border-radius: 8px;
+    overflow: hidden;
+    width:100%;
+    background-color: #070410;
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-info {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+}
+
+
+.movie-info h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5em;
+    color: #a5b4fc;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+/* this styles the title and the paragraph text inside the movie container */
+
+.movie-info p {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    padding-top:4px;
+    line-height:1.625;
+    margin: 0;
+}
+
+.watch-button-lg {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    width: 100%;
+    margin-top: 0;
+    background-color: #6366f1;
+    color: #FFFFFF;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+
+.watch-button-lg:hover {
+    background-color: #4f46e5;
+}
+
+.featured-movie-container {
+    display:flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border: 2px solid #4f46e5;
+    margin-bottom: 48px;
+    background-color: #231651;
+}
+
+.featured-poster {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.featured-details {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 16px;
+    padding: 16px;
+    background-color: #070410;
+    border-radius: 8px;
+    border: 1px solid #3730a3;
+    margin-top: 0;
+}
+/* layout for the first movie container */
+
+.featured-info {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.featured-button {
+    font-size: 2em;
+    width: 100%;
+    margin-top: 0;
+    background-color: #6366f1;
+    color: #FFFFFF;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    height: 100%;
+}
+
+.featured-button:hover {
+    background-color:#4f46e5;
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+/* layout for the 2 movies that create 2 equal columns, making the movie containers be beside each other */
+
+.vertical-card {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    min-height: auto;
+}
+/* forces the movie container and details to stack vertically */
+
+.vertical-card .movie-poster {
+    aspect-ratio: 4/3;
+    height: auto;
+}
+
+.vertical-card .movie-details-right {
+    padding-top: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #070410;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.vertical-card .movie-info {
+    margin-bottom: 16px;
+}
+
+.horizontal-card-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+.horizontal-card-list .movie-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 16px;
+    min-height: 250px;
+}
+/* layout for the 3 lower stacked movies. the grid template column puts the poster on the left which is 300px and the details on the right which is 1fr */
+
+.horizontal-card-list .movie-poster {
+    height: 100%;
+    aspect-ratio: unset;
+}
+
+.horizontal-card-list .movie-details-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    background-color: #070410;
+    padding: 16px;
+    border-radius: 8px;
+}
+/* this styles the black details box for the horizontal images. similar to the vertical ones, using the flexbox to manage the stacking of the content and setting it with a black background */

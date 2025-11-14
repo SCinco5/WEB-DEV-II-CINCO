@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="desktop.css">
+    <!-- links the CSS file  -->
+</head>
+<body>
+    
+    <header class="header">
+        <!-- defines the top nav bar that runs the full width of the screen -->
+        <div class="header-content">
+            <!-- this one centers the watch.it, genres, search and limits them to 900px content width -->
+            <h1 class="font-teko logo">watch.it</h1>
+
+            <nav class="navigation">
+                <!-- contains the nav or genre links -->
+                <a href="#" class="nav-link">Action</a>
+                <a href="#" class="nav-link">Comedy</a>
+                <a href="#" class="nav-link">Romance</a>
+                <a href="#" class="nav-link">Drama</a>
+            </nav>
+
+            <div>
+                <button class="font-teko search-button">SEARCH</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <main class="main-content">
+            <!-- 1 -->
+            <div class="featured-movie-container">
+                <!-- this contains the first movie which is who framed roger rabbit -->
+                <div class="movie-poster featured-poster">
+                    <img src="who-framed-roger-rabbit.jpg" class="w-full h-full object-cover">
+                </div>
+
+                <div class="featured-details">
+                    <div class="movie-info featured-info">
+                        <h3 class="movie-title font-teko">Who Framed Roger Rabbit (1988)</h3>
+                        <p>In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!</p>
+                    </div>
+
+                    <button class="font-teko featured-button">WATCH NOW</button>
+                </div>
+            </div>
+
+            <div class="two-column-grid">
+                    <!-- this container makes the 2 movies "hook" and "la la land" to sit or stay beside each other in 2 vertical columns -->
+                    <!-- 2 -->
+                 <div class="movie-container vertical-card">
+                     <div class="movie-poster">
+                         <img src="hook.jpg" class="w-full h-full object-cover">
+                     </div>
+
+                     <div class="movie-details-right">
+                         <div class="movie-info">
+                             <h3 class="movie-title font-teko">Hook (1991)</h3>
+                             <p>Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter, who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure, magic, and nostalgia blend in this timeless family classic.</p>
+                         </div>
+                         <button class="watch-button-lg font-teko">WATCH NOW</button>
+                     </div>
+                 </div>
+
+                    <!-- 3 -->
+                 <div class="movie-container vertical-card">
+                     <div class="movie-poster">
+                         <img src="la-la-land.jpg" class="w-full h-full object-cover">
+                     </div>
+
+                     <div class="movie-details-right">
+                         <div class="movie-info">
+                              <h3 class="movie-title font-teko">La La Land (2016)</h3>
+                              <p>Love, dreams, and the magic of LA take center stage in this musical masterpiece. Watch as two starry-eyed artists navigate passion and ambition in a world where every moment feels like a cinematic spectacle!</p>
+                         </div>
+                         <button class="watch-button-lg font-teko">WATCH NOW</button>
+                     </div>
+                    </div>
+
+                </div>
+
+                <div class="horizontal-card-list">
+                    <!-- this container has 3 movies and they are stacked vertically -->
+
+                    <!-- 4 -->
+                    <div class="movie-container">
+                        <div class="movie-poster">
+                            <img src="hidden-figures.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="movie-details-right">
+                            <div class="movie-info">
+                                <h3 class="movie-title font-teko">Hidden Figures (2016)</h3>
+                                <p>Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. Battling discrimination and defying the odds, these brilliant African-American women prove that intelligence, perseverance, and unity can change history and break barriers.</p>
+                            </div>
+                            <button class="watch-button-lg font-teko">WATCH NOW</button>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="movie-container">
+                        <div class="movie-poster">
+                            <img src="palm-springs.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="movie-details-right">
+                            <div class="movie-info">
+                                <h3 class="movie-title font-teko">Palm Springs (2020)</h3>
+                                <p>A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day, two strangers find love, chaos, and meaning in the most unexpected ways.</p>
+                            </div>
+                            <button class="watch-button-lg font-teko">WATCH NOW</button>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="movie-container">
+                        <div class="movie-poster">
+                            <img src="barbie.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="movie-details-right">
+                            <div class="movie-info">
+                                <h3 class="movie-title font-teko">Barbie (2023)</h3>
+                                <p>Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines what it means to dream big!</p>
+                            </div>
+                            <button class="watch-button-lg font-teko">WATCH NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+         
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+/* imports the google fonts that is required to be used */
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #070410;
+    color: #FFFFFF;
+    margin: 0;
+    padding:0;
+}
+
+.font-teko {
+    font-family: 'Teko', sans-serif;
+}
+
+.main-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(35, 22, 81, 0.5);
+}
+/* this part centers the main content on the screen that sets a maximum width of 900px and adds a large indigo color shadow */
+
+.header {
+    background-color: #231651;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+/* makes the nav bar sticky at the top and applies #231651 color, and sets 16px for large spacing around the content for mobile */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.search-button {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    background-color: #FFFFFF;
+    color: #231651;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #e5e7eb;
+}
+
+.header-divider {
+    height: 2px;
+    background-color: #FFFFFF;
+    opacity: 0.3;
+    margin-top: 16px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 16px;
+
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* this and the .main-content defines the main scrollable area using flexbox to stack the movie containers vertically with the 16px gap */
+
+.movie-container {
+    background-color: #231651;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border: 2px solid #4f46e5;
+}
+/* styles each movie box with the background color, subtle border, and 16px small spacing */
+
+.movie-poster {
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #070410;
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* to set up the image to fill the entire box and has rounded corners */
+
+.movie-info {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #070410;
+    border-radius: 8px;
+    border: 1px solid #3730a3;
+}
+
+.movie-info h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    color: #a5b4fc;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.movie-info p {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    padding-top:4px;
+    line-height:1.625;
+    margin: 0;
+}
+
+.watch-button-lg {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    margin-top: 16px;
+    background-color: #6366f1;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+}
+
+/* this one makes a full width, uppercase button with the colors i've used as well as the Teko font */
+
+.watch-button-lg:hover {
+    background-color: #4f46e5;
+}
